@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox style = "-fx-background-color:#818180" alignment="center" prefHeight="1000" prefWidth="625" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Win">
+      <Label fx:id="winnerLabel" style="-fx-font-size: 53;"  text="player wins" />
+      <ImageView fx:id="winner_image" fitHeight="250" fitWidth="250" pickOnBounds="true" preserveRatio="true" />
+      <Label/>
+      <Label/>
+      <HBox  alignment="bottom_center"  spacing="10">
+            <VBox alignment="center"    >
+                  <Label fx:id="healthLabel" text="label" />
+                  <Button   prefWidth="180" wrapText="true" onAction="#addHealth" styleClass="dark-blue" text="Augmenter la sante" />
+            </VBox>
+            <VBox alignment="center"     >
+                  <Label fx:id="manaLabel" text="Label" />
+                  <Button prefWidth="180" wrapText="true" onAction="#addMana"  styleClass="dark-blue" text="Augmenter mana" />
+            </VBox>
+            <VBox alignment="center"     >
+                  <Label fx:id="specialAttackManaLabel" text="Label" />
+                  <Button prefWidth="180" wrapText="true" onAction="#addSAM" styleClass="dark-blue"  text="Diminuer mana d'attaque speciale" />
+            </VBox>
+            <VBox alignment="center"     >
+                  <Label fx:id="specialAttackLabel" text="Label" />
+                  <Button prefWidth="180" wrapText="true" onAction="#addSA" styleClass="dark-blue"  text="Augmenter degats d'attaque speciale" />
+            </VBox>
+            <VBox alignment="center"     >
+                  <Label fx:id="manaRegenLabel" text="Label" />
+                  <Button prefWidth="180" wrapText="true" onAction="#addMR" styleClass="dark-blue"  text="Augmenter regeneration de mana" />
+            </VBox>
+      </HBox>
+      <Label style="-fx-font-size: 20;" fx:id="pointsLeftLabel" text="Points restants : 100" />
+      <HBox alignment="center"  prefHeight="100" >
+
+            <TextField fx:id="username" promptText="Enregistrez votre personnage" />
+            <Button styleClass="dark-blue" onAction="#savePlayer"  text="Submit" />
+
+      </HBox>
+      <Label fx:id="result" />
+
+</VBox>

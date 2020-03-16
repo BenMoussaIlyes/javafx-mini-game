@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="center" style = "-fx-background-color: #818180"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+       <Label style="-fx-font-size: 25;" textFill="#fecb2f" text="Choisissez votre combattant!"/>
+       <StackPane >
+              <HBox alignment="center" prefHeight="100.0"  >
+                     <VBox alignment="center" prefWidth="450.0" spacing="10.0">
+                            <Button style="-fx-font-size: 25;"  styleClass="dark-blue" fx:id="button_hunter1"  onAction="#selectHunter1" text="Chasseur"/>
+
+                            <Button style="-fx-font-size: 25;"  styleClass="dark-blue" fx:id="button_warrior1"  onAction="#selectWarrior1" text="Guerrier"/>
+
+                            <Button style="-fx-font-size: 25;"  styleClass="dark-blue" fx:id="button_mage1" onAction="#selectMage1" text="Mage"/>
+                        <Label text="ou" />
+                         <HBox alignment="center"  >
+                             <TextField  fx:id="usernameTextfield1" promptText="Saisir Username" />
+                             <Button styleClass="bevel-grey" onAction="#uploadCharacter1"  text="Charger combattant" />
+                         </HBox>
+                         <Label fx:id="result1" textFill="#ff0000" visible="false" />
+
+                        <ImageView fx:id="imageFighter1" fitHeight="200.0" fitWidth="200.0"  />
+                           <Label fx:id="choice1" style="-fx-font-size: 25;" text="choice2" />
+
+                         <Button fx:id="button_confirm1" styleClass="glass-grey"  onAction="#confirm1" text="Confirmer" />
+
+                     </VBox>
+                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                            <Label style="-fx-font-size: 47;" text="VS."/>
+                        <Button fx:id="button_bothConfirmed" styleClass="green"  onAction="#startFight" text="Commencer" visible="false" />
+                      </VBox>
+                     <VBox alignment="center" layoutX="10.0" layoutY="20.0" prefWidth="450.0" spacing="10.0">
+                            <Button style="-fx-font-size: 25;"  styleClass="dark-blue" fx:id="button_hunter2"  onAction="#selectHunter2" text="Chasseur"/>
+                            <Button style="-fx-font-size: 25;"  styleClass="dark-blue" fx:id="button_warrior2" onAction="#selectWarrior2" text="Guerrier"/>
+                            <Button style="-fx-font-size: 25;"  styleClass="dark-blue" fx:id="button_mage2"  onAction="#selectMage2" text="Mage"/>
+                         <Label text="ou" />
+                         <HBox alignment="center"   >
+                             <TextField fx:id="usernameTextfield2"   promptText="Saisir Username" />
+                             <Button  onAction="#uploadCharacter2" styleClass="bevel-grey"  text="Charger combattant" />
+                         </HBox>
+                         <Label fx:id="result2" textFill="#ff0000" visible="false" />
+
+                         <ImageView fx:id="imageFighter2" fitHeight="200.0" fitWidth="200.0"  />
+                           <Label style="-fx-font-size: 25;"  fx:id="choice2" text="choice 2" />
+
+
+                        <Button fx:id="button_confirm2" styleClass="glass-grey" onAction="#confirm2" text="Confirmer" />
+                     </VBox>
+              </HBox>
+       </StackPane>
+</VBox>

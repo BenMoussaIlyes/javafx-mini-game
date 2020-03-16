@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox style = "-fx-background-color: #818180" alignment="center" prefHeight="1000" prefWidth="625" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InFight">
+
+        <Label style="-fx-font-size: 25;" text="C'est parti!"/>
+
+        <StackPane >
+                <HBox alignment="center" >
+                        <VBox alignment="center" prefWidth="400.0" spacing="10.0">
+                        <ImageView fx:id="image_fighter1" fitHeight="250.0" fitWidth="250.0"  />
+                                <Label fx:id="choice1" text="choice2" />
+                        <HBox alignment="center" prefWidth="200.0">
+                              <Label text="Sante " />
+                              <ProgressBar style="-fx-accent: #ff0000;" fx:id="health1" prefWidth="200.0" progress="0.0" />
+                        </HBox>
+                        <HBox alignment="center" prefWidth="200.0">
+                              <Label text="Mana " />
+                              <ProgressBar fx:id="mana1" prefWidth="200.0" progress="0.0" />
+                        </HBox>
+                        <HBox alignment="center" fx:id="hboxArmor1" visible="false" prefWidth="200.0">
+                            <Label text="Bouclier " />
+                            <ProgressBar fx:id="armor1" style="-fx-accent: #ffff00;" prefWidth="200.0" progress="0.0" />
+                        </HBox>
+                        <HBox fx:id="controls1" alignment="center"  spacing="5.0">
+                              <Button styleClass="dark-blue" wrapText="true" fx:id="normalAttack1"  onAction="#executeNormalAttack1" text="Attaque normale" />
+                              <Button styleClass="dark-blue" wrapText="true" fx:id="skipTrun1"  onAction="#executeSkipTurn1" text="Passer" />
+                              <Button styleClass="dark-blue" wrapText="true" fx:id="specialAttack1"  onAction="#executeSpecialAttack1" text="Attaque puissante" />
+                        </HBox>
+
+                        </VBox>
+                        <VBox alignment="CENTER"  prefWidth="200.0">
+                                <Label style="-fx-font-size: 25;" text="VS."/>
+                            <Label textAlignment="center" fx:id="fightLog" text="Fight!" />
+                        </VBox>
+                        <VBox alignment="center"  prefWidth="400.0" spacing="10.0">
+                        <ImageView fx:id="image_fighter2" fitHeight="250.0" fitWidth="250.0"  />
+                                <Label fx:id="choice2" text="choice 2" />
+                        <HBox alignment="center" prefWidth="200.0">
+                              <Label text="Sante " />
+                              <ProgressBar style="-fx-accent: #ff0000;" fx:id="health2" prefWidth="200.0" progress="0.0" />
+                        </HBox>
+                        <HBox alignment="center"  prefWidth="200.0">
+                              <Label text="Mana " />
+                              <ProgressBar  fx:id="mana2" prefWidth="200.0" progress="0.0" />
+                        </HBox>
+                        <HBox alignment="center" fx:id="hboxArmor2"  visible="false" prefWidth="200.0">
+                            <Label text="Bouclier " />
+                            <ProgressBar fx:id="armor2" style="-fx-accent: #ffff00;" prefWidth="200.0" progress="0.0" />
+                        </HBox>
+                        <HBox fx:id="controls2" alignment="center"  spacing="5.0">
+                              <Button styleClass="dark-blue" wrapText="true" fx:id="normalAttack2"  onAction="#executeNormalAttack2" text="Attaque normale" />
+                              <Button styleClass="dark-blue" wrapText="true" fx:id="skipTrun2" onAction="#executeSkipTurn2" text="Passer" />
+                              <Button styleClass="dark-blue" wrapText="true" fx:id="specialAttack2" onAction="#executeSpecialAttack2" text="Attaque puissante" />
+
+                        </HBox>
+
+                        </VBox>
+                </HBox>
+        </StackPane>
+</VBox>
